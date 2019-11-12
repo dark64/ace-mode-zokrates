@@ -37,7 +37,7 @@ define(function (require, exports, module) {
     var ZoKratesHighlightRules = function () {
 
         var keywords = (
-            "for|endfor|as|in|return|byte|field|bool|if|do|else|export|false|def|for|import|from|uint|in|public|private|struct|true"
+            "endfor|as|return|byte|field|bool|if|do|else|export|false|def|for|import|from|uint|in|public|private|struct|true"
         );
 
         var keywordMapper = this.createKeywordMapper({
