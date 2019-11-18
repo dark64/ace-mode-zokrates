@@ -28,11 +28,11 @@
  *
  * ***** END LICENSE BLOCK ***** */
 
-define(function (require, exports, module) {
+ace.define("ace/mode/zokrates_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(acequire, exports, module) {
     "use strict";
 
-    var oop = require("../lib/oop");
-    var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
+    var oop = acequire("../lib/oop");
+    var TextHighlightRules = acequire("./text_highlight_rules").TextHighlightRules;
 
     var ZoKratesHighlightRules = function () {
 
@@ -98,4 +98,23 @@ define(function (require, exports, module) {
     oop.inherits(ZoKratesHighlightRules, TextHighlightRules);
 
     exports.ZoKratesHighlightRules = ZoKratesHighlightRules;
+});
+
+ace.define("ace/mode/zokrates",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/zokrates_highlight_rules"], function(acequire, exports, module) {
+    "use strict";
+
+    var oop = acequire("../lib/oop");
+    var TextMode = acequire("./text").Mode;
+    var ZoKratesHighlightRules = acequire("./zokrates_highlight_rules").ZoKratesHighlightRules;
+
+    var Mode = function () {
+        this.HighlightRules = ZoKratesHighlightRules;
+    };
+    oop.inherits(Mode, TextMode);
+
+    (function () {
+        this.$id = "ace/mode/zokrates";
+    }).call(Mode.prototype);
+
+    exports.Mode = Mode;
 });
