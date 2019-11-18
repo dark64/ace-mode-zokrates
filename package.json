@@ -1,0 +1,25 @@
+{
+  "name": "ace-mode-zokrates",
+  "version": "1.0.0",
+  "description": "Ace Mode for ZoKrates DSL",
+  "main": "ZoKratesHighlightRules.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dark64/ace-mode-zokrates.git"
+  },
+  "keywords": [
+    "zokrate",
+    "ace",
+    "mode",
+    "brace"
+  ],
+  "author": "Darko Macesic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dark64/ace-mode-zokrates/issues"
+  },
+  "homepage": "https://github.com/dark64/ace-mode-zokrates#readme"
+}
